@@ -1,5 +1,10 @@
 Automatizar o Daily Log/Daily Entry com o módulo Notion do PyPi.
 
+Para funcionar você precisa das variáveis de ambiente NOTIONTOKEN e NOTIONPAGE. Além disso, é necessário o módulo notion que pode ser instalado da seguinte maneira:
+'''
+# pip install notion
+'''
+
 ### Parte 1
 
 Ele pode abrir automaticamente uma entrada, preencher com dados do dia, como, por exemplo, a data, o tempo, dados da bolsa, talvez até como eu dormi (teria que ter acesso aos meus dados do saúde do iOS), os incentivos do dia, o que eu teria que fazer ou algo de progresso, e depois mostrar a recompensa.
@@ -7,3 +12,4 @@ Ele pode abrir automaticamente uma entrada, preencher com dados do dia, como, po
 ### Parte 2
 
 Eu posso criar um script que todo os dias cria uma Daily Entry/Log para mim com assuntos aleatórios baseados no meu banco de dados, e outro script pra mudar "os pesos" de cada assunto. Por exemplo, estou precisando estudar mais francês, logo eu aumento o peso dos conteúdos em francês.
+
