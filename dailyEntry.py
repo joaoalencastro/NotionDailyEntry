@@ -13,9 +13,6 @@ page = client.get_block(environ['NOTIONPAGE'])
 # Now create a new page for the Daily Entry
 daily_entry = page.children.add_new(PageBlock, title=str(datetime.now())[:10])
 
-todo_block = daily_entry.children.add_new(TodoBlock, title="Criar o script de Daily Log")
-todo_block.checked = True
-
 intentions = daily_entry.children.add_new(HeaderBlock, title="Intentions")
 
 daily_entry.children.add_new(DividerBlock)
@@ -31,5 +28,3 @@ daily_entry.children.add_new(DividerBlock)
 actions_items = daily_entry.children.add_new(HeaderBlock, title="Action items")
 
 actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')
-
-daily_entry.children.add_new(DividerBlock)
