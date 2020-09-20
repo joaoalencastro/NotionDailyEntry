@@ -1,6 +1,6 @@
-
+#!/usr/bin/python3
 from notion.client import NotionClient
-from notion.block import TextBlock, TodoBlock, PageBlock
+from notion.block import TextBlock, TodoBlock, PageBlock, HeaderBlock, DividerBlock
 from datetime import datetime
 from os import environ
 
@@ -15,3 +15,21 @@ daily_entry = page.children.add_new(PageBlock, title=str(datetime.now())[:10])
 
 todo_block = daily_entry.children.add_new(TodoBlock, title="Criar o script de Daily Log")
 todo_block.checked = True
+
+intentions = daily_entry.children.add_new(HeaderBlock, title="Intentions")
+
+daily_entry.children.add_new(DividerBlock)
+
+happenings = daily_entry.children.add_new(HeaderBlock, title="Happenings")
+
+daily_entry.children.add_new(DividerBlock)
+
+grateful_for = daily_entry.children.add_new(HeaderBlock, title="Grateful for")
+
+daily_entry.children.add_new(DividerBlock)
+
+actions_items = daily_entry.children.add_new(HeaderBlock, title="Action items")
+
+actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')
+
+daily_entry.children.add_new(DividerBlock)
