@@ -36,9 +36,9 @@ daily_entry.children.add_new(TextBlock, title="")
 
 grateful_for = daily_entry.children.add_new(HeaderBlock, title="🙌🏽 Sou grato")
 
-daily_entry.children.add_new(NumberedListBlock, "Pela minha família, que é presente e abençoada.")
-daily_entry.children.add_new(NumberedListBlock, "Pela minha boa condição de vida.")
-daily_entry.children.add_new(NumberedListBlock, "Pelos meus amigos que se importam demais comigo.")
+daily_entry.children.add_new(NumberedListBlock, title="Pela minha família, que é presente e abençoada.")
+daily_entry.children.add_new(NumberedListBlock, title="Pela minha boa condição de vida.")
+daily_entry.children.add_new(NumberedListBlock, title="Pelos meus amigos que se importam demais comigo.")
 
 actions_items = daily_entry.children.add_new(HeaderBlock, title="📜 A fazeres")
 
