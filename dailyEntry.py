@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python3
 from notion.client import NotionClient
-from notion.block import TextBlock, TodoBlock, PageBlock, HeaderBlock, DividerBlock
+from notion.block import TextBlock, TodoBlock, PageBlock, HeaderBlock, DividerBlock, NumberedListBlock
 from datetime import datetime
 from os import environ
 
@@ -19,18 +19,34 @@ daily_entry.title = str(datetime.now())[:10]
 
 # Down here is the page's customization
 
-intentions = daily_entry.children.add_new(HeaderBlock, title="Intentions")
+daily_dream = daily_entry.children.add_new(HeaderBlock, title="☁ Sonhei com")
+
+# Pular linha
+daily_entry.children.add_new(TextBlock, "")
+
+intentions = daily_entry.children.add_new(HeaderBlock, title="👔 Intenções")
+
+# Pular linha
+daily_entry.children.add_new(TextBlock, "")
+
+happenings = daily_entry.children.add_new(HeaderBlock, title="🚴🏽‍♂️ Acontecimentos")
+
+# Pular linha
+daily_entry.children.add_new(TextBlock, "")
+
+grateful_for = daily_entry.children.add_new(HeaderBlock, title="🙌🏽 Sou grato")
+
+daily_entry.children.add_new(NumberedListBlock, "Pela minha família, que é presente e abençoada.")
+daily_entry.children.add_new(NumberedListBlock, "Pela minha boa condição de vida.")
+daily_entry.children.add_new(NumberedListBlock, "Pelos meus amigos que se importam demais comigo.")
+
+actions_items = daily_entry.children.add_new(HeaderBlock, title="📜 A fazeres")
+
+actions_items_todo_block_1 = daily_entry.children.add_new(TodoBlock, title='Ler no mínimo dois artigos/notícias. Medium ou Feedly.')
 
 daily_entry.children.add_new(DividerBlock)
 
-happenings = daily_entry.children.add_new(HeaderBlock, title="Happenings")
+# Pular linha
+daily_entry.children.add_new(TextBlock, "")
 
-daily_entry.children.add_new(DividerBlock)
-
-grateful_for = daily_entry.children.add_new(HeaderBlock, title="Grateful for")
-
-daily_entry.children.add_new(DividerBlock)
-
-actions_items = daily_entry.children.add_new(HeaderBlock, title="Action items")
-
-actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')
+health = daily_entry.children.add_new(HeaderBlock, title="Saúde")
