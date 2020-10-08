@@ -19,34 +19,34 @@ daily_entry.title = str(datetime.now())[:10]
 
 # Down here is the page's customization
 
-daily_dream = daily_entry.children.add_new(HeaderBlock, title="Sonhei com")
+daily_dream = daily_entry.children.add_new(HeaderBlock, title="☁ Sonhei com")
 
 # Pular linha
-daily_entry.children.add_new(TextBlock, "")
+daily_entry.children.add_new(TextBlock, " ")
 
-intentions = daily_entry.children.add_new(HeaderBlock, title="Intenções")
-
-# Pular linha
-daily_entry.children.add_new(TextBlock, "")
-
-happenings = daily_entry.children.add_new(HeaderBlock, title="Acontecimentos")
+intentions = daily_entry.children.add_new(HeaderBlock, title="👔 Intenções")
 
 # Pular linha
-daily_entry.children.add_new(TextBlock, "")
+daily_entry.children.add_new(TextBlock, " ")
 
-grateful_for = daily_entry.children.add_new(HeaderBlock, title="Sou grato")
+happenings = daily_entry.children.add_new(HeaderBlock, title="🚴🏽‍♂️ Acontecimentos")
+
+# Pular linha
+daily_entry.children.add_new(TextBlock, " ")
+
+grateful_for = daily_entry.children.add_new(HeaderBlock, title="🙌🏽 Sou grato")
 
 daily_entry.children.add_new(NumberedListBlock, "Pela minha família, que é presente e abençoada.")
 daily_entry.children.add_new(NumberedListBlock, "Pela minha boa condição de vida.")
 daily_entry.children.add_new(NumberedListBlock, "Pelos meus amigos que se importam demais comigo.")
 
-actions_items = daily_entry.children.add_new(HeaderBlock, title="A fazeres")
+actions_items = daily_entry.children.add_new(HeaderBlock, title="📜 A fazeres")
 
 actions_items_todo_block_1 = daily_entry.children.add_new(TodoBlock, title='Ler no mínimo dois artigos/notícias. Medium ou Feedly.')
 
 daily_entry.children.add_new(DividerBlock)
 
 # Pular linha
-daily_entry.children.add_new(TextBlock, "")
+daily_entry.children.add_new(TextBlock, " ")
 
 health = daily_entry.children.add_new(HeaderBlock, title="Saúde")
