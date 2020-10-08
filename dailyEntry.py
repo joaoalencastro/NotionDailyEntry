@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/python3
 from notion.client import NotionClient
 from notion.block import TextBlock, TodoBlock, PageBlock, HeaderBlock, DividerBlock
