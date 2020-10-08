@@ -17,7 +17,6 @@ cv = client.get_collection_view(environ['NOTIONPAGE'])
 daily_entry = cv.collection.add_row()
 daily_entry.title = str(datetime.now())[:10]
 
-'''
 # Down here is the page's customization
 
 intentions = daily_entry.children.add_new(HeaderBlock, title="Intentions")
@@ -34,4 +33,4 @@ daily_entry.children.add_new(DividerBlock)
 
 actions_items = daily_entry.children.add_new(HeaderBlock, title="Action items")
 
-actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')'''
+actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')
