@@ -9,10 +9,16 @@ from os import environ
 client = NotionClient(token_v2=environ['NOTIONTOKEN'])
 
 # Replace this URL with the URL of the page you want to edit
-page = client.get_block(environ['NOTIONPAGE'])
+#page = client.get_block(environ['NOTIONPAGE'])
+cv = client.get_collection_view(environ['NOTIONPAGE'])
 
 # Now create a new page for the Daily Entry
-daily_entry = page.children.add_new(PageBlock, title=str(datetime.now())[:10])
+#daily_entry = page.children.add_new(PageBlock, title=str(datetime.now())[:10])
+daily_entry = cv.collection.add_row()
+daily_entry.title = str(datetime.now())[:10]
+
+'''
+# Down here is the page's customization
 
 intentions = daily_entry.children.add_new(HeaderBlock, title="Intentions")
 
@@ -28,4 +34,4 @@ daily_entry.children.add_new(DividerBlock)
 
 actions_items = daily_entry.children.add_new(HeaderBlock, title="Action items")
 
-actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')
+actions_items_todo_block = daily_entry.children.add_new(TodoBlock, title='')'''
